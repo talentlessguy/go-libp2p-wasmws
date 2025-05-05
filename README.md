@@ -11,8 +11,7 @@ go get github.com/talentlessguy/go-libp2p-wasmws
 ## Usage
 
 ```go
-// go build: js || wasm
-//go:build js || wasm
+//go:build js
 
 package main
 
