@@ -1,6 +1,6 @@
 # go-libp2p-wasmws
 
-A go-libp2p dial-only WebSocket transport that works with WebAssembly.
+A dial-only WebSocket transport that works with WebAssembly.
 
 ## Install
 
