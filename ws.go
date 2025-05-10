@@ -9,7 +9,6 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/transport"
 
-	lipp2pws "github.com/libp2p/go-libp2p/p2p/transport/websocket"
 	ma "github.com/multiformats/go-multiaddr"
 	mafmt "github.com/multiformats/go-multiaddr-fmt"
 	manet "github.com/multiformats/go-multiaddr/net"
@@ -123,7 +122,7 @@ func (t *WebsocketTransport) Proxy() bool {
 }
 
 func init() {
-	manet.RegisterFromNetAddr(lipp2pws.ParseWebsocketNetAddr, "websocket")
+	manet.RegisterFromNetAddr(ParseWebsocketNetAddr, "websocket")
 	manet.RegisterToNetAddr(ConvertWebsocketMultiaddrToNetAddr, "ws")
 	manet.RegisterToNetAddr(ConvertWebsocketMultiaddrToNetAddr, "wss")
 }
