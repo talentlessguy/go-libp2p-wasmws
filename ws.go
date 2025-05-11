@@ -73,9 +73,7 @@ func (t *WebsocketTransport) maDial(ctx context.Context, raddr ma.Multiaddr, sco
 		return nil, fmt.Errorf("parse multiaddr: %w", err)
 	}
 
-	wscon, _, err := ws.Dial(ctx, wsurl.String(), &ws.DialOptions{
-		Subprotocols: []string{"libp2p"},
-	})
+	wscon, _, err := ws.Dial(ctx, wsurl.String(), &ws.DialOptions{})
 	if err != nil {
 		scope.Done()
 		return nil, fmt.Errorf("websocket dial failed: %w", err)
